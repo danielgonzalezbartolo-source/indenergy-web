@@ -1,0 +1,337 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Indenergy Soluciones | Consultoría Industrial con IA"
+  description="Consultoría industrial con IA para cumplimiento regulatorio, eficiencia energética y automatización en sectores industriales."
+>
+
+  <!-- ================= NAVEGACIÓN (HEADER) ================= -->
+  <nav class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2 cursor-pointer">
+        <img
+          src="/logo actualizado h.svg"
+          alt="Indenergy Soluciones"
+          class="h-36 w-auto max-w-[980px] object-contain"
+        />
+      </div>
+      <div class="hidden md:flex gap-8 font-medium text-indenergy-navy/80 text-sm">
+        <a href="#servicios" class="hover:text-indenergy-turquoise transition-colors">Servicios</a>
+        <a href="#ia-industrial" class="hover:text-indenergy-turquoise transition-colors">IA Industrial</a>
+        <a href="#contacto" class="hover:text-indenergy-turquoise transition-colors">Contacto</a>
+      </div>
+      <button class="hidden md:inline-flex bg-[#042874] text-white font-bold font-heading px-6 py-2.5 rounded hover:bg-[#031f57] transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+        Auditoría Inicial
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= PORTADA 1: CORPORATIVO Y ENERGÉTICO ================= -->
+  <header class="relative bg-indenergy-navy w-full overflow-hidden min-h-[80vh] flex items-center">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+    <div class="absolute left-1/2 top-0 -translate-x-1/2 bg-indenergy-turquoise/30 w-[600px] h-[400px] blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute right-0 bottom-0 bg-indenergy-lime/10 w-[400px] h-[300px] blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-10 pb-20">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-indenergy-lime text-sm font-medium mb-6 backdrop-blur-sm">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indenergy-lime opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-indenergy-lime"></span>
+        </span>
+        Diagnóstico industrial + IA en 15 días
+      </div>
+      <h1 class="font-heading font-extrabold text-4xl md:text-6xl text-white tracking-tight mb-8 leading-tight">
+        Hacemos que la <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise">
+          operación sea más inteligente.
+        </span>
+      </h1>
+      <p class="font-sans text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+        Acompañamos a plantas, proyectos y organizaciones en cumplimiento regulatorio, eficiencia energética y automatización con decisiones basadas en datos.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#servicios" class="font-heading font-bold text-indenergy-navy bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise px-8 py-3.5 rounded shadow-[0_0_20px_rgba(0,200,135,0.4)] hover:shadow-[0_0_30px_rgba(0,200,135,0.7)] transition-all hover:-translate-y-1">
+          Explorar Soluciones
+        </a>
+        <a href="#contacto" class="font-heading font-bold text-white border border-white/20 bg-white/10 px-8 py-3.5 rounded hover:bg-white/20 transition-all">
+          Solicitar diagnóstico
+        </a>
+      </div>
+      <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm text-gray-300">
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">Cumplimiento operativo</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">Optimización energética</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">IA aplicada a procesos</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PORTADA 2: INDUSTRIAL Y AUTOMATIZACIÓN ================= -->
+  <section class="relative w-full overflow-hidden min-h-[85vh] flex items-center bg-gray-900 border-t border-white/10">
+    
+    <!-- Fondo Fotográfico -->
+    <div class="absolute inset-0 w-full h-full z-0">
+      <img src="/hero-fondo.jpg.jpg" alt="Fondo Industrial" class="w-full h-full object-cover opacity-90" />
+      <div class="absolute inset-0 bg-indenergy-navy/30 mix-blend-multiply"></div>
+    </div>
+
+    <!-- Fondo Azul Curvo -->
+    <div class="absolute top-[-20%] bottom-[-20%] left-[-15%] w-[65%] bg-gradient-to-r from-[#042874] via-[#0b4f9a] to-[#00979f] rounded-full shadow-2xl z-0 opacity-80 border-r border-white/10"></div>
+
+    <!-- Contenedor Principal -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-5 gap-12 items-center pt-20 pb-20">
+      
+      <!-- Columna Izquierda: Textos -->
+      <div class="md:col-span-2 pr-0 md:-ml-12">
+        <h2 class="text-white font-bold tracking-widest uppercase text-sm mb-3">
+          Sector Industrial y Manufactura:
+        </h2>
+        
+        <h3 class="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-[#8fc941] tracking-tight mb-6 leading-tight">
+          AUTOMATIZACIÓN, <br/>
+          EFICIENCIA Y <br/>
+          SOSTENIBILIDAD
+        </h3>
+        
+        <p class="font-sans text-lg text-gray-100 mb-10 max-w-md leading-relaxed">
+          Impulsamos tu línea de producción con <strong class="text-white">visión artificial</strong>, robótica de software (RPA) y gemelos digitales para un futuro más rentable y libre de errores.
+        </p>
+        
+        <a href="#ia-industrial" class="inline-flex items-center gap-3 font-heading font-bold text-white bg-transparent border-2 border-white/20 hover:border-indenergy-turquoise pl-6 pr-4 py-3 rounded-full hover:bg-white/5 transition-all group shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(0,200,135,0.3)]">
+          VER TECNOLOGÍA
+          <div class="bg-white/10 rounded-full p-2 group-hover:bg-indenergy-turquoise transition-colors">
+            <svg class="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- Columna Derecha: Panel Flotante Glassmorphism -->
+      <div class="md:col-span-3 relative hidden md:flex justify-end pr-10">
+        <div class="w-80 bg-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold mb-6">
+            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+            MONITOREO ACTIVO: 100%
+          </div>
+
+          <!-- Gráfica de Barras -->
+          <div class="flex items-end gap-1.5 h-24 mb-6 border-b border-white/20 pb-2">
+            <div class="w-full bg-indenergy-turquoise/30 h-[20%] rounded-t-sm"></div>
+            <div class="w-full bg-indenergy-turquoise/40 h-[30%] rounded-t-sm"></div>
+            <div class="w-full bg-indenergy-turquoise/40 h-[25%] rounded-t-sm"></div>
+            <div class="w-full bg-indenergy-turquoise/50 h-[45%] rounded-t-sm"></div>
+            <div class="w-full bg-indenergy-turquoise/50 h-[60%] rounded-t-sm"></div>
+            <div class="w-full bg-indenergy-turquoise/60 h-[55%] rounded-t-sm"></div>
+            <div class="w-full bg-indenergy-turquoise/70 h-[75%] rounded-t-sm"></div>
+            <div class="w-full bg-indenergy-turquoise/80 h-[85%] rounded-t-sm"></div>
+            <div class="w-full bg-indenergy-turquoise shadow-[0_0_12px_rgba(0,200,135,0.8)] h-[100%] rounded-t-sm relative">
+              <svg class="absolute -top-6 left-1/2 -translate-x-1/2 w-4 h-4 text-indenergy-turquoise drop-shadow-md" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+            </div>
+          </div>
+
+          <!-- Estadísticas -->
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <p class="text-gray-300 text-[9px] uppercase font-bold tracking-wider">OEE Planta</p>
+              </div>
+              <p class="text-white font-heading font-bold text-2xl">94.2%</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5 mb-1">
+                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <p class="text-gray-300 text-[9px] uppercase font-bold tracking-wider">Ahorro Mensual</p>
+              </div>
+              <p class="text-white font-heading font-bold text-2xl">18.5%</p>
+            </div>
+          </div>
+          
+          <div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-3">
+            <div class="p-1.5 bg-white/5 rounded-md border border-white/10">
+              <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+            </div>
+            <div>
+              <p class="text-gray-400 text-[10px] uppercase font-bold tracking-wider">Algoritmo IA</p>
+              <p class="text-white text-xs font-bold tracking-wide">SINCRONIZADO</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN DE VALOR ================= -->
+  <section class="py-16 bg-white border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
+        <div>
+          <p class="text-indenergy-turquoise font-bold tracking-widest uppercase text-sm mb-3">Por qué elegirnos</p>
+          <h3 class="font-heading text-3xl md:text-4xl font-extrabold text-indenergy-navy mb-4">Convertimos complejidad en resultados medibles</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Diseñamos soluciones para que tu operación sea más segura, más rentable y más preparada para escalar con tecnología inteligente.</p>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-[#00979f]/20 bg-[#00979f]/10 p-4 shadow-sm">
+            <p class="text-2xl font-bold text-[#00979f]">+30%</p>
+            <p class="text-sm text-gray-600 mt-1">Eficiencia operativa</p>
+          </div>
+          <div class="rounded-2xl border border-[#00979f]/20 bg-[#00979f]/10 p-4 shadow-sm">
+            <p class="text-2xl font-bold text-[#00979f]">24/7</p>
+            <p class="text-sm text-gray-600 mt-1">Monitoreo inteligente</p>
+          </div>
+          <div class="rounded-2xl border border-[#00979f]/20 bg-[#00979f]/10 p-4 shadow-sm">
+            <p class="text-2xl font-bold text-[#00979f]">100%</p>
+            <p class="text-sm text-gray-600 mt-1">Visibilidad y trazabilidad</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN DE SERVICIOS ================= -->
+  <section id="servicios" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-indenergy-turquoise font-bold tracking-widest uppercase text-sm mb-2">Nuestro Portafolio</h2>
+        <h3 class="font-heading text-3xl md:text-5xl font-extrabold text-indenergy-navy">Soluciones Integrales</h3>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">Transformamos la complejidad regulatoria y operativa en eficiencia pura.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tarjetas de Servicio (1 a 5) -->
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col h-full">
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">1. Cumplimiento Regulatorio</h4>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">Tu blindaje ante CRE, ASEA, SAT y CFE. Pasamos de carpetas y USBs a un sistema auditable y centralizado.</p>
+          <div class="bg-indenergy-navy rounded-xl p-4 relative overflow-hidden mt-auto">
+            <div class="absolute left-0 top-0 w-1 h-full bg-indenergy-turquoise"></div>
+            <p class="text-xs font-bold text-indenergy-lime mb-2 tracking-wide uppercase">✦ Integración con IA</p>
+            <p class="text-xs text-gray-300 leading-relaxed">Sistemas RPA para alertas predictivas y auditoría algorítmica.</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col h-full">
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">2. Energía Solar y Eficiencia</h4>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">Reducimos tu costo por kWh dándote independencia energética. Análisis de ROI y auditorías de eficiencia.</p>
+          <div class="bg-indenergy-navy rounded-xl p-4 relative overflow-hidden mt-auto">
+            <div class="absolute left-0 top-0 w-1 h-full bg-indenergy-turquoise"></div>
+            <p class="text-xs font-bold text-indenergy-lime mb-2 tracking-wide uppercase">✦ Integración con IA</p>
+            <p class="text-xs text-gray-300 leading-relaxed">Gemelos Digitales para proyectar rendimiento solar y sincronizar picos de producción.</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col h-full">
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">3. Gestión de Proyectos</h4>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">Del plano a la operación sin sorpresas. Supervisión de obra y evaluación técnico-económica.</p>
+          <div class="bg-indenergy-navy rounded-xl p-4 relative overflow-hidden mt-auto">
+            <div class="absolute left-0 top-0 w-1 h-full bg-indenergy-turquoise"></div>
+            <p class="text-xs font-bold text-indenergy-lime mb-2 tracking-wide uppercase">✦ Integración con IA</p>
+            <p class="text-xs text-gray-300 leading-relaxed">Analítica predictiva para prevenir desviaciones de presupuesto/tiempo.</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col h-full">
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">4. Integridad y Mantenimiento</h4>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">Garantizamos la continuidad operativa. Programas preventivos, auditorías técnicas y estandarización.</p>
+          <div class="bg-indenergy-navy rounded-xl p-4 relative overflow-hidden mt-auto">
+            <div class="absolute left-0 top-0 w-1 h-full bg-indenergy-turquoise"></div>
+            <p class="text-xs font-bold text-indenergy-lime mb-2 tracking-wide uppercase">✦ Integración con IA</p>
+            <p class="text-xs text-gray-300 leading-relaxed">Mantenimiento Predictivo 4.0 analizando vibración/temperatura.</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col h-full md:col-span-2 lg:col-span-1">
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">5. Sistemas de Gestión</h4>
+          <p class="text-gray-600 text-sm mb-6 flex-grow">Alineamos tu operación. Implementación de SASISOPA y normativas ISO garantizando trazabilidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN: EL DIFERENCIADOR IA (VERSIÓN INDUSTRIAL + ENERGÍA) ================= -->
+  <section id="ia-industrial" class="relative py-24 bg-indenergy-navy overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-3/4 bg-indenergy-turquoise/20 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-1/3 h-1/2 bg-indenergy-lime/10 blur-[100px] rounded-full pointer-events-none"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20 max-w-3xl mx-auto">
+        <h2 class="text-indenergy-lime font-bold tracking-widest uppercase text-sm mb-3">El Diferenciador IA</h2>
+        <h3 class="font-heading text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+          Transformamos la complejidad operativa en una <br class="hidden md:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise">ventaja competitiva.</span>
+        </h3>
+        <p class="text-gray-300 text-lg">Integramos Inteligencia Artificial para anticipar fallas, optimizar procesos y escalar la operación de tu planta o proyecto energético.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group relative rounded-2xl bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors duration-300 overflow-hidden shadow-2xl backdrop-blur-sm">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indenergy-lime to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <h4 class="font-heading text-xl font-bold text-white mb-3">Automatización RPA</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">Reduce drásticamente el esfuerzo operativo en <strong class="text-white font-semibold">gestión administrativa, control documental y normativas</strong> (STPS, ISO, ASEA, CRE).</p>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors duration-300 overflow-hidden shadow-2xl backdrop-blur-sm">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indenergy-turquoise to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <h4 class="font-heading text-xl font-bold text-white mb-3">Gemelos Digitales</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">Simulan escenarios de producción y consumo energético para <strong class="text-white font-semibold">detectar cuellos de botella y reducir costos</strong> de forma predictiva.</p>
+          </div>
+        </div>
+
+        <div class="group relative rounded-2xl bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors duration-300 overflow-hidden shadow-2xl backdrop-blur-sm">
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indenergy-lime to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <h4 class="font-heading text-xl font-bold text-white mb-3">Visión Artificial</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">Monitorea líneas de producción e instalaciones en tiempo real, elevando <strong class="text-white font-semibold">el control de calidad y la seguridad industrial</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN: CONTACTO Y FOOTER ================= -->
+  <section id="contacto" class="py-24 bg-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h2 class="font-heading text-3xl md:text-5xl font-extrabold text-indenergy-navy mb-6">¿Listo para optimizar tu operación?</h2>
+      <p class="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">Agenda una auditoría inicial sin costo. Analizaremos tus áreas de oportunidad en cumplimiento regulatorio, eficiencia energética y estandarización.</p>
+      
+      <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6 text-left">
+        <div>
+          <p class="text-indenergy-turquoise font-bold tracking-wide uppercase text-sm mb-1">Contacto Directo</p>
+          <p class="text-indenergy-navy font-heading font-bold text-xl">Ing. Consultor Sr.</p>
+          <a href="mailto:contacto@indenergysoluciones.com" class="text-gray-500 hover:text-indenergy-lime transition-colors">contacto@indenergysoluciones.com</a>
+        </div>
+        <button class="w-full md:w-auto font-heading font-bold text-white bg-indenergy-navy px-8 py-4 rounded-xl shadow-md hover:bg-indenergy-green transition-colors hover:-translate-y-1">
+          Agendar Auditoría
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-indenergy-navy border-t border-white/10 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <img
+          src="/logo actualizado h.svg"
+          alt="Indenergy Soluciones"
+          class="h-32 w-auto max-w-[980px] object-contain invert mb-4"
+        />
+        <p class="text-gray-400 text-sm leading-relaxed max-w-xs">Consultoría industrial de nueva generación. Integramos tecnología e Inteligencia Artificial para el sector energético y de manufactura.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-4">Soluciones</h4>
+        <ul class="text-gray-400 text-sm space-y-2">
+          <li><a href="#servicios" class="hover:text-indenergy-lime transition-colors">Portafolio de Servicios</a></li>
+          <li><a href="#ia-industrial" class="hover:text-indenergy-lime transition-colors">Integración IA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 text-center border-t border-white/10 pt-8">
+      <p class="text-gray-500 text-xs">&copy; 2026 Indenergy Soluciones. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</Layout>
