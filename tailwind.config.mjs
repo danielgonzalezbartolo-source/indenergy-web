@@ -5,11 +5,11 @@ export default {
     extend: {
       colors: {
         indenergy: {
-          'navy': '#15323B',      // Azul Marino Profundo - fondos, header, hero, footer
-          'turquoise': '#00C887', // Turquesa Medio - marca, iconos, acentos
-          'green': '#00A249',     // Verde Vibrante - acentos secundarios
-          'lime': '#B0C53F',      // Verde Lima - CTA principal, indicadores
-          'slate-100': '#F4F7F7', // Gris claro - fondos de secciÃ³n
+          'base': '#15323B',        // Azul base - fondos, header, hero, footer
+          'turquesa': '#008C09',    // Turquesa vibrante - marca, iconos, acentos
+          'vibrante': '#00A249',    // Verde vibrante - acentos secundarios
+          'lima': '#B0C53F',        // Verde lima - CTA principal, indicadores
+          'slate-100': '#F4F7F7',   // Gris claro - fondos de sección
         }
       },
       fontFamily: {

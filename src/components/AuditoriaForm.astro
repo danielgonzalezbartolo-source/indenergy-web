@@ -5,7 +5,7 @@
 <div id="auditoria-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
   <div class="bg-white rounded-3xl p-8 w-full max-w-md shadow-2xl max-h-[90vh] overflow-y-auto">
     <div class="flex items-center justify-between mb-6">
-      <h3 class="font-heading text-2xl font-bold text-indenergy-navy">Auditoría Inicial Gratuita</h3>
+      <h3 class="font-heading text-2xl font-bold text-indenergy-base">Auditoría Inicial Gratuita</h3>
       <button 
         onclick="document.getElementById('auditoria-modal').classList.add('hidden')"
         class="text-gray-400 hover:text-gray-600 text-2xl font-bold"
@@ -19,59 +19,59 @@
     <form id="auditoria-form" action="https://formspree.io/f/xzebvown" method="POST" class="space-y-4">
       <!-- Campo Nombre -->
       <div>
-        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Nombre</label>
+        <label class="block text-sm font-semibold text-indenergy-base mb-2">Nombre</label>
         <input 
           type="text" 
           name="nombre" 
           required
-          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquesa focus:ring-2 focus:ring-indenergy-turquesa/20"
           placeholder="Tu nombre completo"
         />
       </div>
 
       <!-- Campo Empresa -->
       <div>
-        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Empresa</label>
+        <label class="block text-sm font-semibold text-indenergy-base mb-2">Empresa</label>
         <input 
           type="text" 
           name="empresa" 
           required
-          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquesa focus:ring-2 focus:ring-indenergy-turquesa/20"
           placeholder="Nombre de tu empresa"
         />
       </div>
 
       <!-- Campo Email -->
       <div>
-        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Correo Electrónico</label>
+        <label class="block text-sm font-semibold text-indenergy-base mb-2">Correo Electrónico</label>
         <input 
           type="email" 
           name="email" 
           required
-          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquesa focus:ring-2 focus:ring-indenergy-turquesa/20"
           placeholder="tu@empresa.com"
         />
       </div>
 
       <!-- Campo Teléfono -->
       <div>
-        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Teléfono</label>
+        <label class="block text-sm font-semibold text-indenergy-base mb-2">Teléfono</label>
         <input 
           type="tel" 
           name="telefono" 
           required
-          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquesa focus:ring-2 focus:ring-indenergy-turquesa/20"
           placeholder="+52 (XXX) XXX-XXXX"
         />
       </div>
 
       <!-- Campo Sector -->
       <div>
-        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Sector</label>
+        <label class="block text-sm font-semibold text-indenergy-base mb-2">Sector</label>
         <select 
           name="sector" 
           required
-          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquesa focus:ring-2 focus:ring-indenergy-turquesa/20"
         >
           <option value="">Selecciona un sector</option>
           <option value="manufactura">Manufactura e Industria</option>
@@ -84,11 +84,11 @@
 
       <!-- Campo Mensaje -->
       <div>
-        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Tu principal desafío (opcional)</label>
+        <label class="block text-sm font-semibold text-indenergy-base mb-2">Tu principal desafío (opcional)</label>
         <textarea 
           name="mensaje" 
           rows="3"
-          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquesa focus:ring-2 focus:ring-indenergy-turquesa/20"
           placeholder="Ej: Reducir consumo energético, cumplimiento normativo, reducir paros operativos..."
         ></textarea>
       </div>
@@ -100,7 +100,7 @@
           name="privacidad" 
           required
           id="privacidad"
-          class="mt-1 w-4 h-4 text-indenergy-turquoise border-gray-300 rounded focus:ring-indenergy-turquoise/20 cursor-pointer"
+          class="mt-1 w-4 h-4 text-indenergy-turquesa border-gray-300 rounded focus:ring-indenergy-turquesa/20 cursor-pointer"
         />
         <label for="privacidad" class="text-xs text-gray-600 cursor-pointer">
           Acepto recibir comunicaciones de Indenergy sobre soluciones y casos de éxito.
@@ -110,7 +110,7 @@
       <!-- Botón Submit -->
       <button 
         type="submit"
-        class="w-full font-heading font-bold text-white bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise py-3 rounded-lg shadow-[0_0_20px_rgba(0,200,135,0.4)] hover:shadow-[0_0_30px_rgba(0,200,135,0.7)] transition-all hover:-translate-y-0.5 mt-6"
+        class="w-full font-heading font-bold text-white bg-gradient-to-r from-indenergy-lime to-indenergy-turquesa py-3 rounded-lg shadow-[0_0_20px_rgba(0,200,135,0.4)] hover:shadow-[0_0_30px_rgba(0,200,135,0.7)] transition-all hover:-translate-y-0.5 mt-6"
       >
         Solicitar Auditoría
       </button>
