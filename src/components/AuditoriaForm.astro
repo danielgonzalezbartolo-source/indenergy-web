@@ -1,0 +1,164 @@
+---
+// Componente de formulario para auditoría inicial
+---
+
+<div id="auditoria-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+  <div class="bg-white rounded-3xl p-8 w-full max-w-md shadow-2xl max-h-[90vh] overflow-y-auto">
+    <div class="flex items-center justify-between mb-6">
+      <h3 class="font-heading text-2xl font-bold text-indenergy-navy">Auditoría Inicial Gratuita</h3>
+      <button 
+        onclick="document.getElementById('auditoria-modal').classList.add('hidden')"
+        class="text-gray-400 hover:text-gray-600 text-2xl font-bold"
+      >
+        ✕
+      </button>
+    </div>
+    
+    <p class="text-gray-600 text-sm mb-6">En 15 días recibirás un diagnóstico de riesgos y oportunidades en cumplimiento regulatorio, eficiencia energética y automatización.</p>
+
+    <form id="auditoria-form" action="https://formspree.io/f/xoqzygey" method="POST" class="space-y-4">
+      <!-- Campo Nombre -->
+      <div>
+        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Nombre</label>
+        <input 
+          type="text" 
+          name="nombre" 
+          required
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          placeholder="Tu nombre completo"
+        />
+      </div>
+
+      <!-- Campo Empresa -->
+      <div>
+        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Empresa</label>
+        <input 
+          type="text" 
+          name="empresa" 
+          required
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          placeholder="Nombre de tu empresa"
+        />
+      </div>
+
+      <!-- Campo Email -->
+      <div>
+        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Correo Electrónico</label>
+        <input 
+          type="email" 
+          name="email" 
+          required
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          placeholder="tu@empresa.com"
+        />
+      </div>
+
+      <!-- Campo Teléfono -->
+      <div>
+        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Teléfono</label>
+        <input 
+          type="tel" 
+          name="telefono" 
+          required
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          placeholder="+52 (XXX) XXX-XXXX"
+        />
+      </div>
+
+      <!-- Campo Sector -->
+      <div>
+        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Sector</label>
+        <select 
+          name="sector" 
+          required
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+        >
+          <option value="">Selecciona un sector</option>
+          <option value="manufactura">Manufactura e Industria</option>
+          <option value="energetico">Sector Energético</option>
+          <option value="estacion-servicio">Estación de Servicio</option>
+          <option value="proyecto">Proyecto / Construcción</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <!-- Campo Mensaje -->
+      <div>
+        <label class="block text-sm font-semibold text-indenergy-navy mb-2">Tu principal desafío (opcional)</label>
+        <textarea 
+          name="mensaje" 
+          rows="3"
+          class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indenergy-turquoise focus:ring-2 focus:ring-indenergy-turquoise/20"
+          placeholder="Ej: Reducir consumo energético, cumplimiento normativo, reducir paros operativos..."
+        ></textarea>
+      </div>
+
+      <!-- Checkbox Privacidad -->
+      <div class="flex items-start gap-2">
+        <input 
+          type="checkbox" 
+          name="privacidad" 
+          required
+          id="privacidad"
+          class="mt-1 w-4 h-4 text-indenergy-turquoise border-gray-300 rounded focus:ring-indenergy-turquoise/20 cursor-pointer"
+        />
+        <label for="privacidad" class="text-xs text-gray-600 cursor-pointer">
+          Acepto recibir comunicaciones de Indenergy sobre soluciones y casos de éxito.
+        </label>
+      </div>
+
+      <!-- Botón Submit -->
+      <button 
+        type="submit"
+        class="w-full font-heading font-bold text-white bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise py-3 rounded-lg shadow-[0_0_20px_rgba(0,200,135,0.4)] hover:shadow-[0_0_30px_rgba(0,200,135,0.7)] transition-all hover:-translate-y-0.5 mt-6"
+      >
+        Solicitar Auditoría
+      </button>
+
+      <p class="text-xs text-gray-500 text-center mt-3">Nos pondremos en contacto en 24 horas.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Abrir modal
+  function openAuditoriaModal() {
+    document.getElementById('auditoria-modal').classList.remove('hidden');
+  }
+
+  // Cerrar modal cuando se hace clic fuera
+  document.getElementById('auditoria-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'auditoria-modal') {
+      document.getElementById('auditoria-modal').classList.add('hidden');
+    }
+  });
+
+  // Hacer disponible la función globalmente
+  window.openAuditoriaModal = openAuditoriaModal;
+
+  // Manejar el envío del formulario
+  document.getElementById('auditoria-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Mostrar mensaje de éxito
+    const form = document.getElementById('auditoria-form');
+    const originalHTML = form.innerHTML;
+    
+    form.innerHTML = `
+      <div class="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
+        <svg class="w-8 h-8 text-green-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <h4 class="font-bold text-green-800 mb-1">¡Solicitud Enviada!</h4>
+        <p class="text-sm text-green-700">Revisaremos tu caso y nos pondremos en contacto en 24 horas.</p>
+      </div>
+    `;
+    
+    // Cerrar modal después de 3 segundos
+    setTimeout(() => {
+      document.getElementById('auditoria-modal').classList.add('hidden');
+      form.innerHTML = originalHTML;
+      form.reset();
+    }, 3000);
+  });
+</script>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AuditoriaForm from '../components/AuditoriaForm.astro';
 ---
 
 <Layout
@@ -22,7 +23,10 @@ import Layout from '../layouts/Layout.astro';
         <a href="#ia-industrial" class="hover:text-indenergy-turquoise transition-colors">IA Industrial</a>
         <a href="#contacto" class="hover:text-indenergy-turquoise transition-colors">Contacto</a>
       </div>
-      <button class="hidden md:inline-flex bg-[#042874] text-white font-bold font-heading px-6 py-2.5 rounded hover:bg-[#031f57] transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+      <button 
+        onclick="window.openAuditoriaModal()"
+        class="hidden md:inline-flex bg-[#042874] text-white font-bold font-heading px-6 py-2.5 rounded hover:bg-[#031f57] transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
+      >
         Auditoría Inicial
       </button>
     </div>
@@ -40,29 +44,32 @@ import Layout from '../layouts/Layout.astro';
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indenergy-lime opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-indenergy-lime"></span>
         </span>
-        Diagnóstico industrial + IA en 15 días
+        Diagnóstico de riesgos en 15 días
       </div>
-      <h1 class="font-heading font-extrabold text-4xl md:text-6xl text-white tracking-tight mb-8 leading-tight">
-        Hacemos que la <br/>
+      <h1 class="font-heading font-extrabold text-4xl md:text-6xl text-white tracking-tight mb-6 leading-tight">
+        Reduce riesgo regulatorio, <br/>
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise">
-          operación sea más inteligente.
+          costo energético y paros operativos.
         </span>
       </h1>
       <p class="font-sans text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-        Acompañamos a plantas, proyectos y organizaciones en cumplimiento regulatorio, eficiencia energética y automatización con decisiones basadas en datos.
+        Indenergy integra consultoría industrial, cumplimiento energético e Inteligencia Artificial para plantas, estaciones de servicio y proyectos que necesitan operar con mayor control y trazabilidad.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#servicios" class="font-heading font-bold text-indenergy-navy bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise px-8 py-3.5 rounded shadow-[0_0_20px_rgba(0,200,135,0.4)] hover:shadow-[0_0_30px_rgba(0,200,135,0.7)] transition-all hover:-translate-y-1">
-          Explorar Soluciones
-        </a>
-        <a href="#contacto" class="font-heading font-bold text-white border border-white/20 bg-white/10 px-8 py-3.5 rounded hover:bg-white/20 transition-all">
-          Solicitar diagnóstico
+        <button 
+          onclick="window.openAuditoriaModal()"
+          class="font-heading font-bold text-indenergy-navy bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise px-8 py-3.5 rounded shadow-[0_0_20px_rgba(0,200,135,0.4)] hover:shadow-[0_0_30px_rgba(0,200,135,0.7)] transition-all hover:-translate-y-1 cursor-pointer"
+        >
+          Solicitar Diagnóstico
+        </button>
+        <a href="#servicios" class="font-heading font-bold text-white border border-white/20 bg-white/10 px-8 py-3.5 rounded hover:bg-white/20 transition-all">
+          Ver Soluciones
         </a>
       </div>
       <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm text-gray-300">
-        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">Cumplimiento operativo</span>
-        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">Optimización energética</span>
-        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">IA aplicada a procesos</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">Para Manufactura</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">Para Energía</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">Para Proyectos</span>
       </div>
     </div>
   </header>
@@ -134,16 +141,18 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <div class="flex items-center gap-1.5 mb-1">
                 <svg class="w-3.5 h-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <p class="text-gray-300 text-[9px] uppercase font-bold tracking-wider">OEE Planta</p>
+                <p class="text-gray-300 text-[9px] uppercase font-bold tracking-wider">OEE Alcanzable</p>
               </div>
-              <p class="text-white font-heading font-bold text-2xl">94.2%</p>
+              <p class="text-white font-heading font-bold text-2xl">94%+</p>
+              <p class="text-gray-400 text-[8px]">Con IA y RPA</p>
             </div>
             <div>
               <div class="flex items-center gap-1.5 mb-1">
                 <svg class="w-3.5 h-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                <p class="text-gray-300 text-[9px] uppercase font-bold tracking-wider">Ahorro Mensual</p>
+                <p class="text-gray-300 text-[9px] uppercase font-bold tracking-wider">Reducción Energía</p>
               </div>
-              <p class="text-white font-heading font-bold text-2xl">18.5%</p>
+              <p class="text-white font-heading font-bold text-2xl">18-30%</p>
+              <p class="text-gray-400 text-[8px]">Por diagnóstico</p>
             </div>
           </div>
           
@@ -300,16 +309,22 @@ import Layout from '../layouts/Layout.astro';
       
       <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6 text-left">
         <div>
-          <p class="text-indenergy-turquoise font-bold tracking-wide uppercase text-sm mb-1">Contacto Directo</p>
-          <p class="text-indenergy-navy font-heading font-bold text-xl">Ing. Consultor Sr.</p>
-          <a href="mailto:contacto@indenergysoluciones.com" class="text-gray-500 hover:text-indenergy-lime transition-colors">contacto@indenergysoluciones.com</a>
+          <p class="text-indenergy-turquoise font-bold tracking-wide uppercase text-sm mb-1">Próximo Paso</p>
+          <p class="text-indenergy-navy font-heading font-bold text-xl">Auditoría Inicial Sin Costo</p>
+          <p class="text-gray-500 text-sm mt-1">Analizaremos tus áreas de oportunidad en 15 días.</p>
         </div>
-        <button class="w-full md:w-auto font-heading font-bold text-white bg-indenergy-navy px-8 py-4 rounded-xl shadow-md hover:bg-indenergy-green transition-colors hover:-translate-y-1">
-          Agendar Auditoría
+        <button 
+          onclick="window.openAuditoriaModal()"
+          class="w-full md:w-auto font-heading font-bold text-white bg-indenergy-navy px-8 py-4 rounded-xl shadow-md hover:bg-indenergy-green transition-colors hover:-translate-y-1 cursor-pointer"
+        >
+          Solicitar Auditoría
         </button>
       </div>
     </div>
   </section>
+
+  <!-- Componente Modal de Auditoría -->
+  <AuditoriaForm />
 
   <footer class="bg-indenergy-navy border-t border-white/10 pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
