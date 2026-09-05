@@ -1,0 +1,329 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuditoriaForm from '../components/AuditoriaForm.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<Layout
+  title="Soluciones para Sector Energético | Indenergy"
+  description="Consultoría energética con IA para estaciones de servicio, comercializadores y proyectos. Eficiencia, cumplimiento CRE, ASEA, CFE e ISO 50001."
+>
+
+  <!-- ================= HEADER ================= -->
+  <nav class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 cursor-pointer">
+        <img
+          src="/logo actualizado h.svg"
+          alt="Indenergy Soluciones"
+          class="h-36 w-auto max-w-[980px] object-contain"
+        />
+      </a>
+      <div class="hidden md:flex gap-8 font-medium text-indenergy-navy/80 text-sm">
+        <a href="#soluciones" class="hover:text-indenergy-turquoise transition-colors">Soluciones</a>
+        <a href="#faq" class="hover:text-indenergy-turquoise transition-colors">Preguntas</a>
+        <a href="/" class="hover:text-indenergy-turquoise transition-colors">Inicio</a>
+      </div>
+      <button 
+        onclick="window.openAuditoriaModal()"
+        class="hidden md:inline-flex bg-indenergy-navy text-white font-bold font-heading px-6 py-2.5 rounded hover:opacity-90 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
+      >
+        Auditoría
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="relative bg-indenergy-navy w-full overflow-hidden min-h-[75vh] flex items-center">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+    <div class="absolute left-1/2 top-0 -translate-x-1/2 bg-indenergy-turquoise/25 w-[600px] h-[400px] blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-10 pb-20">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-indenergy-lime text-sm font-medium mb-6 backdrop-blur-sm">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indenergy-lime opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-indenergy-lime"></span>
+        </span>
+        Para Estaciones, Comercializadores y Proyectos Energéticos
+      </div>
+      
+      <h1 class="font-heading font-extrabold text-5xl md:text-6xl text-white tracking-tight mb-6 leading-tight">
+        Cumplimiento CRE/ASEA, <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise">
+          Independencia Energética,
+        </span> <br/>
+        Márgenes Protegidos.
+      </h1>
+      
+      <p class="font-sans text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+        Reducimos riesgo regulatorio, optimizamos costos de energía y escalaos proyectos con decisiones basadas en datos y IA.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button 
+          onclick="window.openAuditoriaModal()"
+          class="font-heading font-bold text-indenergy-navy bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise px-8 py-3.5 rounded shadow-[0_0_20px_rgba(0,200,135,0.4)] hover:shadow-[0_0_30px_rgba(0,200,135,0.7)] transition-all hover:-translate-y-1 cursor-pointer"
+        >
+          Diagnóstico Inicial Gratuito
+        </button>
+        <a href="#faq" class="font-heading font-bold text-white border border-white/20 bg-white/10 px-8 py-3.5 rounded hover:bg-white/20 transition-all">
+          Ver Preguntas Frecuentes
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PROBLEMAS ESPECÍFICOS ================= -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-indenergy-turquoise font-bold tracking-widest uppercase text-sm mb-2">Tus Desafíos</h2>
+        <h3 class="font-heading text-4xl md:text-5xl font-extrabold text-indenergy-navy">Lo que el sector energético enfrenta hoy</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl p-8 border border-blue-200">
+          <div class="text-4xl mb-4">⚖️</div>
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">Cumplimiento Regulatorio</h4>
+          <p class="text-gray-700 text-sm leading-relaxed">Obligaciones complejas ante CRE, ASEA, SENER, CFE sin un sistema centralizado y sin riesgo de hallazgos.</p>
+          <p class="text-blue-700 font-semibold text-sm mt-4">Riesgo: Suspensión de permisos</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl p-8 border border-green-200">
+          <div class="text-4xl mb-4">📊</div>
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">Costo de Energía Alto</h4>
+          <p class="text-gray-700 text-sm leading-relaxed">Sin auditorías, sin contratos optimizados, sin visibilidad de consumo por sitio o período.</p>
+          <p class="text-green-700 font-semibold text-sm mt-4">Oportunidad: 20–35% de ahorro anual</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-amber-50 to-amber-100/50 rounded-2xl p-8 border border-amber-200">
+          <div class="text-4xl mb-4">📈</div>
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">Proyectos sin Rentabilidad Comprobada</h4>
+          <p class="text-gray-700 text-sm leading-relaxed">Falta modelado de generación solar, análisis técnico-económico y proyecciones confiables de ROI.</p>
+          <p class="text-amber-700 font-semibold text-sm mt-4">Riesgo: Decisiones incorrectas de inversión</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOLUCIONES ================= -->
+  <section id="soluciones" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-indenergy-lime font-bold tracking-widest uppercase text-sm mb-2">Nuestras Soluciones</h2>
+        <h3 class="font-heading text-4xl md:text-5xl font-extrabold text-indenergy-navy">Diseñadas para el sector energético</h3>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Solución 1 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-blue-100">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-heading text-2xl font-bold text-indenergy-navy mb-2">Cumplimiento CRE/ASEA Automatizado</h4>
+            <p class="text-gray-600 mb-3">Sistema centralizado para permisos, reportes regulatorios, auditorías internas y trazabilidad 100%. Alertas automáticas de vencimientos.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full">RPA</span>
+              <span class="px-3 py-1 bg-indenergy-turquoise/20 text-indenergy-turquoise text-sm font-semibold rounded-full">Expediente Digital</span>
+            </div>
+            <p class="text-green-700 font-semibold text-sm mt-3">Resultado esperado: Auditorías aprobadas, cero hallazgos críticos</p>
+          </div>
+        </div>
+
+        <!-- Solución 2 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-green-100">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-heading text-2xl font-bold text-indenergy-navy mb-2">Auditoría y Optimización de Energía</h4>
+            <p class="text-gray-600 mb-3">Línea base de consumo, análisis de tarifas, modelado de escenarios y plan de ahorro. Identifica oportunidades de renegociación con CFE.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-green-100 text-green-700 text-sm font-semibold rounded-full">Análisis Predictivo</span>
+              <span class="px-3 py-1 bg-indenergy-lime/20 text-indenergy-lime text-sm font-semibold rounded-full">ROI Proyectado</span>
+            </div>
+            <p class="text-green-700 font-semibold text-sm mt-3">Resultado esperado: 20–35% de ahorro anual en facturación</p>
+          </div>
+        </div>
+
+        <!-- Solución 3 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-yellow-100">
+              <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1m-16 0H1m16.364 1.636l-.707.707M6.343 18.343l-.707.707m12.728-12.728l-.707.707M6.343 6.343L5.636 5.636"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-heading text-2xl font-bold text-indenergy-navy mb-2">Modelado y Análisis de Proyectos Solares</h4>
+            <p class="text-gray-600 mb-3">Gemelo digital de generación, análisis de irradiancia, proyecciones de producción y evaluación técnico-económica con actualización en tiempo real.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-sm font-semibold rounded-full">Gemelos Digitales</span>
+              <span class="px-3 py-1 bg-indenergy-turquoise/20 text-indenergy-turquoise text-sm font-semibold rounded-full">Monitoreo 24/7</span>
+            </div>
+            <p class="text-green-700 font-semibold text-sm mt-3">Resultado esperado: Certeza en ROI y visibilidad de desempeño</p>
+          </div>
+        </div>
+
+        <!-- Solución 4 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-purple-100">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-heading text-2xl font-bold text-indenergy-navy mb-2">Dashboard Operativo Energético</h4>
+            <p class="text-gray-600 mb-3">Control centralizado de consumo, generación, costos y regulación. Alertas en tiempo real de desviaciones, reportes diarios automáticos.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full">Tiempo Real</span>
+              <span class="px-3 py-1 bg-indenergy-lime/20 text-indenergy-lime text-sm font-semibold rounded-full">Inteligencia Operativa</span>
+            </div>
+            <p class="text-green-700 font-semibold text-sm mt-3">Resultado esperado: Control total y decisiones informadas diarias</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= METODOLOGÍA ================= -->
+  <section class="py-20 bg-indenergy-navy relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/3 h-1/2 bg-indenergy-turquoise/10 blur-[120px] rounded-full pointer-events-none"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-indenergy-lime font-bold tracking-widest uppercase text-sm mb-2">Nuestro Proceso</h2>
+        <h3 class="font-heading text-4xl md:text-5xl font-extrabold text-white mb-4">Cómo Trabajamos</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+          <div class="text-4xl font-heading font-bold text-indenergy-lime mb-4">1</div>
+          <h4 class="font-heading text-xl font-bold text-white mb-3">Diagnóstico</h4>
+          <p class="text-gray-300 text-sm">Revisamos permisos, contratos, consumo histórico y mapearemos riesgos regulatorios y de costo.</p>
+          <p class="text-indenergy-lime text-xs font-semibold mt-4">Duración: 5–7 días</p>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+          <div class="text-4xl font-heading font-bold text-indenergy-turquoise mb-4">2</div>
+          <h4 class="font-heading text-xl font-bold text-white mb-3">Modelado</h4>
+          <p class="text-gray-300 text-sm">Proyecciones de energía, escenarios de ahorro, análisis de tarifas y planes de implementación.</p>
+          <p class="text-indenergy-lime text-xs font-semibold mt-4">Duración: 5–7 días</p>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+          <div class="text-4xl font-heading font-bold text-indenergy-lime mb-4">3</div>
+          <h4 class="font-heading text-xl font-bold text-white mb-3">Implementación</h4>
+          <p class="text-gray-300 text-sm">Desplegamos sistemas, configuramos dashboards, renegociamos con CFE si aplica.</p>
+          <p class="text-indenergy-lime text-xs font-semibold mt-4">Duración: 15–30 días</p>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+          <div class="text-4xl font-heading font-bold text-indenergy-turquoise mb-4">4</div>
+          <h4 class="font-heading text-xl font-bold text-white mb-3">Monitoreo</h4>
+          <p class="text-gray-300 text-sm">Seguimiento de KPIs, reportes mensuales, ajustes y optimización continua.</p>
+          <p class="text-indenergy-lime text-xs font-semibold mt-4">Duración: Recurrente</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-indenergy-turquoise font-bold tracking-widest uppercase text-sm mb-2">Preguntas Frecuentes</h2>
+        <h3 class="font-heading text-4xl md:text-5xl font-extrabold text-indenergy-navy">Sobre Regulación y Energía</h3>
+      </div>
+
+      <div class="space-y-6">
+        <details class="bg-gray-50 rounded-2xl p-8 border border-gray-200 cursor-pointer group">
+          <summary class="font-heading text-xl font-bold text-indenergy-navy flex items-center gap-3">
+            ¿Cómo aseguramos cumplimiento ante CRE y ASEA?
+            <svg class="w-6 h-6 text-indenergy-turquoise group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </summary>
+          <p class="text-gray-600 mt-4 leading-relaxed">Revisamos todos los requisitos, documentamos evidencia, automatizamos reportes y coordinamos auditorías internas. Cuando lleguen auditorías externas, estás listo.</p>
+        </details>
+
+        <details class="bg-gray-50 rounded-2xl p-8 border border-gray-200 cursor-pointer group">
+          <summary class="font-heading text-xl font-bold text-indenergy-navy flex items-center gap-3">
+            ¿Qué tan grande debe ser mi operación para una auditoría de energía?
+            <svg class="w-6 h-6 text-indenergy-turquoise group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </summary>
+          <p class="text-gray-600 mt-4 leading-relaxed">Desde estaciones de servicio pequeñas hasta comercializadores complejos. El beneficio es mayor cuanto más alto sea el consumo, pero el ROI se alcanza en 6–18 meses.</p>
+        </details>
+
+        <details class="bg-gray-50 rounded-2xl p-8 border border-gray-200 cursor-pointer group">
+          <summary class="font-heading text-xl font-bold text-indenergy-navy flex items-center gap-3">
+            ¿Cómo renegocia Indenergy con CFE?
+            <svg class="w-6 h-6 text-indenergy-turquoise group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </summary>
+          <p class="text-gray-600 mt-4 leading-relaxed">Usamos datos de auditoría para demostrar a CFE tu potencial de ahorro. Esto refuerza tu posición en negociaciones de tarifa y ajustes contractuales.</p>
+        </details>
+
+        <details class="bg-gray-50 rounded-2xl p-8 border border-gray-200 cursor-pointer group">
+          <summary class="font-heading text-xl font-bold text-indenergy-navy flex items-center gap-3">
+            ¿Cuál es el ROI esperado en un proyecto solar?
+            <svg class="w-6 h-6 text-indenergy-turquoise group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </summary>
+          <p class="text-gray-600 mt-4 leading-relaxed">Varía según localización, consumo y tarifa. Con nuestro gemelo digital, proyectamos con precisión 95%. Típicamente payback en 5–8 años con financiamiento.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="py-20 bg-indenergy-navy relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/2 h-full bg-indenergy-turquoise/10 blur-[120px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white mb-6">¿Listo para optimizar tu energía?</h2>
+      <p class="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">Recibe un diagnóstico completo en 15 días. Identifica oportunidades de ahorro y cumplimiento sin costo.</p>
+      
+      <button 
+        onclick="window.openAuditoriaModal()"
+        class="font-heading font-bold text-indenergy-navy bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise px-10 py-4 rounded-lg shadow-[0_0_20px_rgba(0,200,135,0.4)] hover:shadow-[0_0_30px_rgba(0,200,135,0.7)] transition-all hover:-translate-y-1 cursor-pointer text-lg"
+      >
+        Solicitar Auditoría Inicial
+      </button>
+
+      <p class="text-gray-400 text-sm mt-6">O escribe a: <a href="mailto:contacto@indenergysoluciones.com" class="text-indenergy-lime hover:underline">contacto@indenergysoluciones.com</a></p>
+    </div>
+  </section>
+
+  <!-- Componente Modal de Auditoría -->
+  <AuditoriaForm />
+
+  <!-- Componente WhatsApp Flotante -->
+  <WhatsAppButton />
+
+  <!-- Footer -->
+  <footer class="bg-indenergy-navy border-t border-white/10 pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-gray-500 text-xs">&copy; 2026 Indenergy Soluciones. Especialistas en Sector Energético.</p>
+    </div>
+  </footer>
+
+</Layout>

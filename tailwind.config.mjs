@@ -5,10 +5,11 @@ export default {
     extend: {
       colors: {
         indenergy: {
-          navy: '#042874',
-          turquoise: '#00979f',
-          green: '#00979f',
-          lime: '#00979f',
+          'navy': '#15323B',      // Azul Marino Profundo - fondos, header, hero, footer
+          'turquoise': '#00C887', // Turquesa Medio - marca, iconos, acentos
+          'green': '#00A249',     // Verde Vibrante - acentos secundarios
+          'lime': '#B0C53F',      // Verde Lima - CTA principal, indicadores
+          'slate-100': '#F4F7F7', // Gris claro - fondos de sección
         }
       },
       fontFamily: {

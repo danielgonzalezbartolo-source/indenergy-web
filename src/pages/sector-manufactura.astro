@@ -1,0 +1,330 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuditoriaForm from '../components/AuditoriaForm.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<Layout
+  title="Soluciones para Manufactura e Industria | Indenergy"
+  description="Consultoría industrial con IA para plantas manufactureras. Cumplimiento regulatorio, eficiencia energética y automatización con visión artificial y RPA."
+>
+
+  <!-- ================= HEADER ================= -->
+  <nav class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 cursor-pointer">
+        <img
+          src="/logo actualizado h.svg"
+          alt="Indenergy Soluciones"
+          class="h-36 w-auto max-w-[980px] object-contain"
+        />
+      </a>
+      <div class="hidden md:flex gap-8 font-medium text-indenergy-navy/80 text-sm">
+        <a href="#soluciones" class="hover:text-indenergy-turquoise transition-colors">Soluciones</a>
+        <a href="#faq" class="hover:text-indenergy-turquoise transition-colors">Preguntas</a>
+        <a href="/" class="hover:text-indenergy-turquoise transition-colors">Inicio</a>
+      </div>
+      <button 
+        onclick="window.openAuditoriaModal()"
+        class="hidden md:inline-flex bg-indenergy-navy text-white font-bold font-heading px-6 py-2.5 rounded hover:opacity-90 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
+      >
+        Auditoría
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="relative bg-indenergy-navy w-full overflow-hidden min-h-[75vh] flex items-center">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+    <div class="absolute left-1/2 top-0 -translate-x-1/2 bg-indenergy-lime/25 w-[600px] h-[400px] blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-10 pb-20">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-indenergy-lime text-sm font-medium mb-6 backdrop-blur-sm">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indenergy-lime opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-indenergy-lime"></span>
+        </span>
+        Especializado en Plantas Manufactureras
+      </div>
+      
+      <h1 class="font-heading font-extrabold text-5xl md:text-6xl text-white tracking-tight mb-6 leading-tight">
+        Reducir Paros, <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise">
+          Optimizar Energía,
+        </span> <br/>
+        Cumplir Regulaciones.
+      </h1>
+      
+      <p class="font-sans text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+        Transformamos líneas de producción con inteligencia artificial, automatización y control integral para operar con mayor rentabilidad y seguridad.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button 
+          onclick="window.openAuditoriaModal()"
+          class="font-heading font-bold text-indenergy-navy bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise px-8 py-3.5 rounded shadow-[0_0_20px_rgba(0,200,135,0.4)] hover:shadow-[0_0_30px_rgba(0,200,135,0.7)] transition-all hover:-translate-y-1 cursor-pointer"
+        >
+          Diagnóstico Inicial Gratuito
+        </button>
+        <a href="#faq" class="font-heading font-bold text-white border border-white/20 bg-white/10 px-8 py-3.5 rounded hover:bg-white/20 transition-all">
+          Ver Preguntas Frecuentes
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PROBLEMAS ESPECÍFICOS ================= -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-indenergy-turquoise font-bold tracking-widest uppercase text-sm mb-2">Tus Desafíos</h2>
+        <h3 class="font-heading text-4xl md:text-5xl font-extrabold text-indenergy-navy">Lo que enfrentan las plantas todos los días</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-br from-red-50 to-red-100/50 rounded-2xl p-8 border border-red-200">
+          <div class="text-4xl mb-4">⏸️</div>
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">Paros Operativos</h4>
+          <p class="text-gray-700 text-sm leading-relaxed">Fallas impredecibles que detienen líneas, generan pérdidas de producción y afectan entregas.</p>
+          <p class="text-red-700 font-semibold text-sm mt-4">Costo: $5,000–$50,000+ por hora</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-2xl p-8 border border-orange-200">
+          <div class="text-4xl mb-4">💡</div>
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">Consumo Energético Alto</h4>
+          <p class="text-gray-700 text-sm leading-relaxed">Falta visibilidad del gasto de energía, sin auditorías de eficiencia ni optimización.</p>
+          <p class="text-orange-700 font-semibold text-sm mt-4">Oportunidad: 15–30% de ahorro anual</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-2xl p-8 border border-purple-200">
+          <div class="text-4xl mb-4">📋</div>
+          <h4 class="font-heading text-xl font-bold text-indenergy-navy mb-3">Cumplimiento Regulatorio</h4>
+          <p class="text-gray-700 text-sm leading-relaxed">Obligaciones ante STPS, ISO, ASEA, CRE sin un sistema centralizado y auditable.</p>
+          <p class="text-purple-700 font-semibold text-sm mt-4">Riesgo: Sanciones, multas, cierre</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOLUCIONES ================= -->
+  <section id="soluciones" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-indenergy-lime font-bold tracking-widest uppercase text-sm mb-2">Nuestras Soluciones</h2>
+        <h3 class="font-heading text-4xl md:text-5xl font-extrabold text-indenergy-navy">Respuestas hechas para tu operación</h3>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Solución 1 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-indenergy-lime/20">
+              <svg class="w-8 h-8 text-indenergy-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-heading text-2xl font-bold text-indenergy-navy mb-2">Mantenimiento Predictivo 4.0</h4>
+            <p class="text-gray-600 mb-3">Monitorea vibración, temperatura y datos operativos en tiempo real. Detecta fallos antes de que ocurran.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indenergy-lime/20 text-indenergy-lime text-sm font-semibold rounded-full">RPA + IA</span>
+              <span class="px-3 py-1 bg-indenergy-turquoise/20 text-indenergy-turquoise text-sm font-semibold rounded-full">Gemelos Digitales</span>
+            </div>
+            <p class="text-green-700 font-semibold text-sm mt-3">Resultado esperado: -60% en paros no planificados</p>
+          </div>
+        </div>
+
+        <!-- Solución 2 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-indenergy-turquoise/20">
+              <svg class="w-8 h-8 text-indenergy-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-heading text-2xl font-bold text-indenergy-navy mb-2">Auditoría de Eficiencia Energética</h4>
+            <p class="text-gray-600 mb-3">Línea base, modelado de escenarios y plan de optimización con ROI proyectado.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indenergy-lime/20 text-indenergy-lime text-sm font-semibold rounded-full">Modelado 3D</span>
+              <span class="px-3 py-1 bg-indenergy-turquoise/20 text-indenergy-turquoise text-sm font-semibold rounded-full">Análisis Predictivo</span>
+            </div>
+            <p class="text-green-700 font-semibold text-sm mt-3">Resultado esperado: 18–30% de ahorro en kWh anuales</p>
+          </div>
+        </div>
+
+        <!-- Solución 3 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-indenergy-lime/20">
+              <svg class="w-8 h-8 text-indenergy-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-heading text-2xl font-bold text-indenergy-navy mb-2">Cumplimiento Regulatorio Automatizado</h4>
+            <p class="text-gray-600 mb-3">Sistema centralizado para STPS, ISO 50001, ISO 9001, ISO 45001. Alertas automáticas, expedientes auditables.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indenergy-lime/20 text-indenergy-lime text-sm font-semibold rounded-full">RPA</span>
+              <span class="px-3 py-1 bg-indenergy-turquoise/20 text-indenergy-turquoise text-sm font-semibold rounded-full">Trazabilidad 100%</span>
+            </div>
+            <p class="text-green-700 font-semibold text-sm mt-3">Resultado esperado: Auditorías aprobadas, cero hallazgos críticos</p>
+          </div>
+        </div>
+
+        <!-- Solución 4 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
+          <div class="flex-shrink-0">
+            <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-indenergy-turquoise/20">
+              <svg class="w-8 h-8 text-indenergy-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-heading text-2xl font-bold text-indenergy-navy mb-2">Visión Artificial para QC</h4>
+            <p class="text-gray-600 mb-3">Inspección automatizada de líneas de producción. Detecta defectos en tiempo real sin intervención humana.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indenergy-lime/20 text-indenergy-lime text-sm font-semibold rounded-full">Deep Learning</span>
+              <span class="px-3 py-1 bg-indenergy-turquoise/20 text-indenergy-turquoise text-sm font-semibold rounded-full">Tiempo Real</span>
+            </div>
+            <p class="text-green-700 font-semibold text-sm mt-3">Resultado esperado: 99.5% de precisión, 0 defectos al cliente</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= METODOLOGÍA ================= -->
+  <section class="py-20 bg-indenergy-navy relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/3 h-1/2 bg-indenergy-turquoise/10 blur-[120px] rounded-full pointer-events-none"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-indenergy-lime font-bold tracking-widest uppercase text-sm mb-2">Nuestro Proceso</h2>
+        <h3 class="font-heading text-4xl md:text-5xl font-extrabold text-white mb-4">Cómo Trabajamos</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+          <div class="text-4xl font-heading font-bold text-indenergy-lime mb-4">1</div>
+          <h4 class="font-heading text-xl font-bold text-white mb-3">Diagnóstico</h4>
+          <p class="text-gray-300 text-sm">Recopilamos datos, ejecutamos auditorías en el sitio y mapeamos riesgos y oportunidades.</p>
+          <p class="text-indenergy-lime text-xs font-semibold mt-4">Duración: 5–7 días</p>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+          <div class="text-4xl font-heading font-bold text-indenergy-turquoise mb-4">2</div>
+          <h4 class="font-heading text-xl font-bold text-white mb-3">Modelado</h4>
+          <p class="text-gray-300 text-sm">Creamos gemelos digitales, proyecciones de ROI y planes de implementación detallados.</p>
+          <p class="text-indenergy-lime text-xs font-semibold mt-4">Duración: 5–7 días</p>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+          <div class="text-4xl font-heading font-bold text-indenergy-lime mb-4">3</div>
+          <h4 class="font-heading text-xl font-bold text-white mb-3">Implementación</h4>
+          <p class="text-gray-300 text-sm">Desplegamos soluciones, configuramos sistemas y capacitamos al equipo operativo.</p>
+          <p class="text-indenergy-lime text-xs font-semibold mt-4">Duración: 15–30 días</p>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+          <div class="text-4xl font-heading font-bold text-indenergy-turquoise mb-4">4</div>
+          <h4 class="font-heading text-xl font-bold text-white mb-3">Monitoreo</h4>
+          <p class="text-gray-300 text-sm">Seguimiento continuo, optimización y reportes mensuales de KPIs alcanzados.</p>
+          <p class="text-indenergy-lime text-xs font-semibold mt-4">Duración: Recurrente</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-indenergy-turquoise font-bold tracking-widest uppercase text-sm mb-2">Preguntas Frecuentes</h2>
+        <h3 class="font-heading text-4xl md:text-5xl font-extrabold text-indenergy-navy">Sobre Cumplimiento y Operación</h3>
+      </div>
+
+      <div class="space-y-6">
+        <details class="bg-gray-50 rounded-2xl p-8 border border-gray-200 cursor-pointer group">
+          <summary class="font-heading text-xl font-bold text-indenergy-navy flex items-center gap-3">
+            ¿Cómo nos preparamos para una auditoría STPS?
+            <svg class="w-6 h-6 text-indenergy-turquoise group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </summary>
+          <p class="text-gray-600 mt-4 leading-relaxed">Hacemos una auditoría interna, documentamos hallazgos y creamos un plan de cierre con evidencia. Antes de que llegue STPS, tu planta está lista.</p>
+        </details>
+
+        <details class="bg-gray-50 rounded-2xl p-8 border border-gray-200 cursor-pointer group">
+          <summary class="font-heading text-xl font-bold text-indenergy-navy flex items-center gap-3">
+            ¿Qué es un gemelo digital y cómo ayuda?
+            <svg class="w-6 h-6 text-indenergy-turquoise group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </summary>
+          <p class="text-gray-600 mt-4 leading-relaxed">Es una réplica digital de tu planta. Podés simular cambios, predecir resultados y optimizar sin parar la producción. Reduce riesgos y tiempos de implementación.</p>
+        </details>
+
+        <details class="bg-gray-50 rounded-2xl p-8 border border-gray-200 cursor-pointer group">
+          <summary class="font-heading text-xl font-bold text-indenergy-navy flex items-center gap-3">
+            ¿Cuánto tiempo toma ver resultados?
+            <svg class="w-6 h-6 text-indenergy-turquoise group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </summary>
+          <p class="text-gray-600 mt-4 leading-relaxed">Diagnóstico en 15 días. Primeros resultados (métricas, alertas) en 30–45 días. ROI completo según la solución: 6–18 meses.</p>
+        </details>
+
+        <details class="bg-gray-50 rounded-2xl p-8 border border-gray-200 cursor-pointer group">
+          <summary class="font-heading text-xl font-bold text-indenergy-navy flex items-center gap-3">
+            ¿Qué pasa si los sistemas no se integran con nuestro ERP?
+            <svg class="w-6 h-6 text-indenergy-turquoise group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </summary>
+          <p class="text-gray-600 mt-4 leading-relaxed">Diseñamos APIs y middlewares personalizados. Si no hay opción técnica, creamos dashboards y reportes automáticos que tu equipo puede exportar.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="py-20 bg-indenergy-navy relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/2 h-full bg-indenergy-lime/10 blur-[120px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white mb-6">¿Listo para transformar tu planta?</h2>
+      <p class="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">Recibe un diagnóstico completo en 15 días. Sin costo, sin compromisos.</p>
+      
+      <button 
+        onclick="window.openAuditoriaModal()"
+        class="font-heading font-bold text-indenergy-navy bg-gradient-to-r from-indenergy-lime to-indenergy-turquoise px-10 py-4 rounded-lg shadow-[0_0_20px_rgba(0,200,135,0.4)] hover:shadow-[0_0_30px_rgba(0,200,135,0.7)] transition-all hover:-translate-y-1 cursor-pointer text-lg"
+      >
+        Solicitar Auditoría Inicial
+      </button>
+
+      <p class="text-gray-400 text-sm mt-6">O escribe a: <a href="mailto:contacto@indenergysoluciones.com" class="text-indenergy-lime hover:underline">contacto@indenergysoluciones.com</a></p>
+    </div>
+  </section>
+
+  <!-- Componente Modal de Auditoría -->
+  <AuditoriaForm />
+
+  <!-- Componente WhatsApp Flotante -->
+  <WhatsAppButton />
+
+  <!-- Footer -->
+  <footer class="bg-indenergy-navy border-t border-white/10 pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-gray-500 text-xs">&copy; 2026 Indenergy Soluciones. Especialistas en Manufactura e Industria.</p>
+    </div>
+  </footer>
+
+</Layout>
